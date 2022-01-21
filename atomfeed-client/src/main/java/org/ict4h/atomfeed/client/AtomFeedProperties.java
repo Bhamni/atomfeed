@@ -1,6 +1,7 @@
 package org.ict4h.atomfeed.client;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class AtomFeedProperties {
     private int readTimeout = 20000;
@@ -8,7 +9,7 @@ public class AtomFeedProperties {
     private boolean controlsEventProcessing = true;
     private int maxFailedEvents = 5;
 
-    private static Logger logger = Logger.getLogger(AtomFeedProperties.class);
+    private static Logger logger = LogManager.getLogger(AtomFeedProperties.class);
 
     public int getReadTimeout() {
         return readTimeout;

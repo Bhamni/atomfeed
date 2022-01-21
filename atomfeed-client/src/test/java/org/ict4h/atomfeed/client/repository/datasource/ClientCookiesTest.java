@@ -12,6 +12,6 @@ public class ClientCookiesTest {
         map.put("JSessionId", "1");
         map.put("SomethingElse", "2");
         ClientCookies clientCookies = new ClientCookies(map);
-        Assert.assertEquals(" SomethingElse=2 ; JSessionId=1 ", clientCookies.getHttpRequestPropertyValue());
+        Assert.assertEquals(" JSessionId=1 ; SomethingElse=2 ", clientCookies.getHttpRequestPropertyValue());
     }
 }

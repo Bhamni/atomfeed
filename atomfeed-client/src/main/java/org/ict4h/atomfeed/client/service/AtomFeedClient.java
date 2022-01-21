@@ -2,7 +2,8 @@ package org.ict4h.atomfeed.client.service;
 
 import com.sun.syndication.feed.atom.Entry;
 import com.sun.syndication.feed.atom.Feed;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.ict4h.atomfeed.client.domain.Event;
 import org.ict4h.atomfeed.client.domain.FailedEvent;
 import org.ict4h.atomfeed.client.domain.Marker;
@@ -23,7 +24,7 @@ import java.util.List;
 public class AtomFeedClient implements FeedClient {
     private static final int FAILED_EVENTS_PROCESS_BATCH_SIZE = 5;
 
-    private static Logger logger = Logger.getLogger(AtomFeedClient.class);
+    private static Logger logger = LogManager.getLogger(AtomFeedClient.class);
 
     private AllFeeds allFeeds;
     private AtomFeedProperties atomFeedProperties;

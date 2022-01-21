@@ -2,7 +2,8 @@ package org.ict4h.atomfeed.client.service;
 
 import com.sun.syndication.feed.atom.Entry;
 import com.sun.syndication.feed.atom.Feed;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.ict4h.atomfeed.client.domain.Marker;
 import org.ict4h.atomfeed.client.exceptions.AtomFeedClientException;
 import org.ict4h.atomfeed.client.repository.AllFeeds;
@@ -19,7 +20,7 @@ public class FeedEnumerator implements Iterable<Entry>, Iterator<Entry> {
     private Feed currentFeed;
     private List<Entry> entries;
 
-    private static Logger logger = Logger.getLogger(FeedEnumerator.class);
+    private static Logger logger = LogManager.getLogger(FeedEnumerator.class);
 
     public FeedEnumerator(AllFeeds allFeeds, Marker marker) {
         this.allFeeds = allFeeds;

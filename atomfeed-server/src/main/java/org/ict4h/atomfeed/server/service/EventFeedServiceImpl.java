@@ -1,7 +1,8 @@
 package org.ict4h.atomfeed.server.service;
 
 import com.sun.syndication.feed.atom.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.ict4h.atomfeed.server.domain.EventFeed;
 import org.ict4h.atomfeed.server.domain.EventRecord;
 import org.ict4h.atomfeed.server.domain.EventRecordComparator;
@@ -18,7 +19,7 @@ public class EventFeedServiceImpl implements EventFeedService {
     private static final String LINK_TYPE_SELF = "self";
     private static final String LINK_TYPE_VIA = "via";
     private static final String ATOMFEED_MEDIA_TYPE = "application/vnd.atomfeed+xml";
-    private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
 	private FeedGenerator feedGenerator;
     private ResourceBundle bundle;
